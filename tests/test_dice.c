@@ -6,11 +6,6 @@
 
 #include "dice.h"
 
-int rand(void)
-{
-	return mock_type(int);
-}
-
 static void test_dice_in_range(void **state)
 {
 	int *param = (int *)*state;

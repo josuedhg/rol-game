@@ -1,3 +1,3 @@
-# c code template
+# Rol Game
 
-This is a template for coding in C
+This is a basic text based rol game

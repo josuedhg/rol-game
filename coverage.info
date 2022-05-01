@@ -5,10 +5,10 @@ FN:13,defend
 FN:18,get_damage
 FN:23,damage
 FN:34,creature_init
-FNDA:12,creature_init
+FNDA:14,creature_init
+FNDA:4,damage
 FNDA:6,defend
 FNDA:6,attack_creature
-FNDA:4,damage
 FNDA:4,get_damage
 FNF:5
 FNH:5
@@ -25,9 +25,9 @@ DA:20,4
 DA:21,4
 DA:23,4
 DA:25,4
-DA:34,12
-DA:36,12
-DA:37,12
+DA:34,14
+DA:36,14
+DA:37,14
 LF:16
 LH:16
 end_of_record

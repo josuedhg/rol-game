@@ -31,13 +31,13 @@
             <td class="headerValue">coverage.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">3</td>
-            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
             <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2022-05-01 15:14:21</td>
+            <td class="headerValue">2022-05-01 16:46:32</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">1</td>
@@ -63,11 +63,16 @@
 <a name="1"><span class="lineNum">       1 </span>            : #include &lt;stdlib.h&gt;</a>
 <a name="2"><span class="lineNum">       2 </span>            : #include &lt;time.h&gt;</a>
 <a name="3"><span class="lineNum">       3 </span>            : </a>
-<a name="4"><span class="lineNum">       4 </span><span class="lineCov">          6 : int dice(int sides)</span></a>
-<a name="5"><span class="lineNum">       5 </span>            : {</a>
-<a name="6"><span class="lineNum">       6 </span><span class="lineCov">          6 :         srand((unsigned)time(NULL));</span></a>
-<a name="7"><span class="lineNum">       7 </span><span class="lineCov">          6 :         return (rand() % sides) + 1;</span></a>
-<a name="8"><span class="lineNum">       8 </span>            : }</a>
+<a name="4"><span class="lineNum">       4 </span>            : #include &quot;dice.h&quot;</a>
+<a name="5"><span class="lineNum">       5 </span>            : </a>
+<a name="6"><span class="lineNum">       6 </span><span class="lineCov">         16 : int dice_roll(struct dice *dice)</span></a>
+<a name="7"><span class="lineNum">       7 </span>            : {</a>
+<a name="8"><span class="lineNum">       8 </span><span class="lineCov">         16 :         srand((unsigned)time(NULL));</span></a>
+<a name="9"><span class="lineNum">       9 </span><span class="lineCov">         16 :         int result = 0;</span></a>
+<a name="10"><span class="lineNum">      10 </span><span class="lineCov">         40 :         for (int i = 0; i &lt; dice-&gt;num_dices; i++)</span></a>
+<a name="11"><span class="lineNum">      11 </span><span class="lineCov">         24 :                 result += (rand() % dice-&gt;dice_type) + 1;</span></a>
+<a name="12"><span class="lineNum">      12 </span><span class="lineCov">         16 :         return result;</span></a>
+<a name="13"><span class="lineNum">      13 </span>            : }</a>
 </pre>
       </td>
     </tr>

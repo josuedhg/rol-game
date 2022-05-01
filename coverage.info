@@ -8,8 +8,8 @@ FN:35,creature_init
 FNDA:2,damage
 FNDA:4,defend
 FNDA:8,creature_init
-FNDA:4,attack
 FNDA:2,get_damage
+FNDA:4,attack
 FNF:5
 FNH:5
 DA:4,4

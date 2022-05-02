@@ -12,10 +12,10 @@
 static void test_creature_attack_fail(void **state)
 {
 	struct attack attack = {.name = "fire wave", .dice ={.dice_type = D4, .num_dices = 1}};
-	struct creature dragon = {.hp = DRAGON_HP_BASE, .atk = 2, .def = 16, .attack = &attack};
+	struct creature dragon = {.max_hp = DRAGON_HP_BASE, .hp = DRAGON_HP_BASE, .atk = 2, .def = 16, .attack = &attack};
 
 	struct attack fist_attack = {.name = "fist attack", .dice ={.dice_type = D4, .num_dices = 1}};
-	struct creature player = {.hp = PLAYER_HP_BASE, .atk = 0, .def = 13, .attack = &fist_attack};
+	struct creature player = {.max_hp = PLAYER_HP_BASE, .hp = PLAYER_HP_BASE, .atk = 0, .def = 13, .attack = &fist_attack};
 
 	will_return(rand, 4);
 	attack_creature(&dragon, &player);
@@ -25,10 +25,10 @@ static void test_creature_attack_fail(void **state)
 static void test_creature_attack_success(void **state)
 {
 	struct attack attack = {.name = "fire wave", .dice ={.dice_type = D4, .num_dices = 1}};
-	struct creature dragon = {.hp = DRAGON_HP_BASE, .atk = 2, .def = 16, .attack = &attack};
+	struct creature dragon = {.max_hp = DRAGON_HP_BASE, .hp = DRAGON_HP_BASE, .atk = 2, .def = 16, .attack = &attack};
 
 	struct attack fist_attack = {.name = "fist attack", .dice ={.dice_type = D4, .num_dices = 1}};
-	struct creature player = {.hp = PLAYER_HP_BASE, .atk = 0, .def = 13, .attack = &fist_attack};
+	struct creature player = {.max_hp = PLAYER_HP_BASE, .hp = PLAYER_HP_BASE, .atk = 0, .def = 13, .attack = &fist_attack};
 
 	will_return(rand, 19);
 	will_return(rand, 2);
@@ -39,10 +39,10 @@ static void test_creature_attack_success(void **state)
 static void test_creature_zero_hp(void **state)
 {
 	struct attack attack = {.name = "fire wave", .dice ={.dice_type = D20, .num_dices = 1}};
-	struct creature dragon = {.hp = DRAGON_HP_BASE, .atk = 2, .def = 16, .attack = &attack};
+	struct creature dragon = {.max_hp = DRAGON_HP_BASE, .hp = DRAGON_HP_BASE, .atk = 2, .def = 16, .attack = &attack};
 
 	struct attack fist_attack = {.name = "fist attack", .dice ={.dice_type = D4, .num_dices = 1}};
-	struct creature player = {.hp = PLAYER_HP_BASE, .atk = 0, .def = 13, .attack = &fist_attack};
+	struct creature player = {.max_hp = PLAYER_HP_BASE, .hp = PLAYER_HP_BASE, .atk = 0, .def = 13, .attack = &fist_attack};
 
 	will_return(rand, 19);
 	will_return(rand, 18);

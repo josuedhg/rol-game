@@ -13,6 +13,7 @@ struct attack {
 };
 
 struct creature {
+	int max_hp;
 	int hp;
 	int atk;
 	int def;

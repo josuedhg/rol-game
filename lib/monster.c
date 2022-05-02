@@ -12,7 +12,8 @@ void monster_init(struct monster *monster, int lvl, int def, struct attack **att
 	monster->creature.atk = lvl;
 
 	struct dice hp_dice = {.dice_type = D8, .num_dices = lvl};
-	monster->creature.hp = dice_roll(&hp_dice);
+	monster->creature.max_hp = dice_roll(&hp_dice);
+	monster->creature.hp = monster->creature.max_hp;
 }
 
 void monster_change_attack(struct monster *monster, int index)

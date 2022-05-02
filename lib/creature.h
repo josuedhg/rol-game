@@ -8,7 +8,7 @@
 struct creature;
 
 struct attack {
-	char *name;
+	const char *name;
 	struct dice dice;
 };
 

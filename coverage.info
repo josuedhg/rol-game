@@ -4,10 +4,10 @@ FN:4,defend
 FN:9,get_damage
 FN:14,damage
 FN:19,attack_creature
-FNDA:4,damage
-FNDA:4,get_damage
 FNDA:6,attack_creature
+FNDA:4,damage
 FNDA:6,defend
+FNDA:4,get_damage
 FNF:4
 FNH:4
 DA:4,6
@@ -44,7 +44,7 @@ end_of_record
 TN:
 SF:/home/runner/work/rol-game/rol-game/lib/monster.c
 FN:6,monster_init
-FN:18,monster_change_attack
+FN:19,monster_change_attack
 FNDA:4,monster_init
 FNDA:2,monster_change_attack
 FNF:2
@@ -58,9 +58,10 @@ DA:12,4
 DA:14,4
 DA:15,4
 DA:16,4
-DA:18,2
-DA:20,2
+DA:17,4
+DA:19,2
 DA:21,2
-LF:12
-LH:12
+DA:22,2
+LF:13
+LH:13
 end_of_record

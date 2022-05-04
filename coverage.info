@@ -4,10 +4,10 @@ FN:4,defend
 FN:9,get_damage
 FN:14,damage
 FN:19,attack_creature
-FNDA:4,damage
-FNDA:4,get_damage
 FNDA:6,attack_creature
 FNDA:6,defend
+FNDA:4,get_damage
+FNDA:4,damage
 FNF:4
 FNH:4
 DA:4,6
@@ -70,9 +70,9 @@ SF:/home/runner/work/rol-game/rol-game/lib/player.c
 FN:6,get_modifier
 FN:19,get_def
 FN:24,player_init
+FNDA:2,get_def
 FNDA:2,player_init
 FNDA:16,get_modifier
-FNDA:2,get_def
 FNF:3
 FNH:3
 DA:6,16

@@ -21,7 +21,6 @@ struct player {
 };
 
 void player_init(struct player *);
-char *player_look_around(struct player *);
 int get_modifier(int attribute);
 
 #endif /* end of include guard: __PLAYER_H__ */

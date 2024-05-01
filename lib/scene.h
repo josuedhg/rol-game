@@ -13,5 +13,7 @@ struct scene {
 };
 
 const char *direction_to_string(int);
+char *scene_look(struct scene *, int /* dirrection */);
+char *scene_look_around(struct scene *);
 
 #endif /* end of include guard: __SCENE_H__ */

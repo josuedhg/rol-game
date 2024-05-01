@@ -9,6 +9,9 @@ const char *direction_text[DIRECTIONS] = {"north", "east", "south", "west"};
 
 const char *direction_to_string(int direction)
 {
+	if (direction < 0 || direction >= DIRECTIONS)
+		return NULL;
+
 	return direction_text[direction];
 }
 
